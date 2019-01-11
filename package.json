@@ -2,7 +2,7 @@
   "name": "gatsby-starter-default",
   "private": true,
   "description": "Front-end of My Website",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Roger Ramos <@rodgerpaulo>",
   "dependencies": {
     "gatsby": "^2.0.76",
