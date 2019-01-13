@@ -13,7 +13,7 @@ import Img from "gatsby-image";
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Image = () => (
+const ProfileImage = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -28,10 +28,10 @@ const Image = () => (
     `}
     render={data => (
       <Img
-        style={{ marginBottom: "1.5rem", borderRadius: "50%" }}
+        style={{ marginBottom: "2.4rem", borderRadius: "50%" }}
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}
   />
 );
-export default Image;
+export default ProfileImage;
