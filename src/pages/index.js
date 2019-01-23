@@ -20,14 +20,18 @@ const IndexPage = ({data}) => {
         </div>
       </Layout>
       <ul>
-        {edges && (edges.map(({node}) => (
-              <ul>
-                  <li>id: {node.id}</li>
-                  <li>path: <a href={node.frontmatter.path}>{node.frontmatter.path}</a></li>
-                  <li>title: {node.frontmatter.title}</li>
-                  <li>date: {node.frontmatter.date}</li>
-              </ul>
-          )))}
+        {edges && (edges.map(({node}, index) => {
+          const customUrl = node.frontmatter.custom_url
+          const path = customUrl ? customUrl : node.fields.slug
+          return (
+            <Fragment key={`log-${index}`}>
+              <li>id: {node.id}</li>
+              <li>url: <a href={path}>{path}</a></li>
+              <li>title: {node.frontmatter.title}</li>
+              <li>date: {node.frontmatter.date}</li>
+            </Fragment>
+          )
+        }))}
       </ul>
     </Fragment>
   )
@@ -47,8 +51,11 @@ export const query = graphql`
           excerpt(pruneLength: 75)
           frontmatter {
             title
-            path
             date(formatString: "MM.DD.YYYY")
+            custom_url
+          }
+          fields {
+            slug
           }
         }
       }

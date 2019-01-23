@@ -13,9 +13,9 @@ collections:
     folder: entries
     create: true
     fields:
-      - { name: path, label: Path }
+      - { name: custom_url, label: Custom url, required: false }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - { name: hero, label: Hero, widget: image }
+      - { name: hero, label: Hero, widget: image, required: false }
       - { label: "Tags", name: "tags", widget: "list", default: ["javascript"] }
       - { name: body, label: Body, widget: markdown }
