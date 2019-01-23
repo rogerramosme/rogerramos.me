@@ -1,0 +1,19 @@
+backend:
+  name: github 
+  repo: rodgerpaulo/rogerramos.me
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: Log Entries
+    label: LogEntries
+    folder: entries
+    create: true
+    fields:
+      - {name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+      - { name: hero, label: Hero, widget: image }
+      - { name : tags, label: Tags, widget: list }
