@@ -2,7 +2,7 @@
   "name": "rogerramos.me",
   "private": true,
   "description": "Front-end of My Website",
-  "version": "0.8.1",
+  "version": "0.8.3",
   "author": "Roger Ramos <@rodgerpaulo>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
