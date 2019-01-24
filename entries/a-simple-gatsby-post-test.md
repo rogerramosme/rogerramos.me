@@ -8,6 +8,7 @@ tags:
   - test
   - gatsby
 ---
-```
+Just playing around with some styles and [content](href) 😁
+``` javascript
 const user = {}
 ```

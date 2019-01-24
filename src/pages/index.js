@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
+import { graphql } from "gatsby"
+import { GlobalStyles } from "config/global-styles";
+
 import Layout from "components/Layout/";
 import ProfileImage from "components/ProfileImage/";
 import SEO from "components/seo";
 import IntroText from 'components/IntroText';
 import LogFeed from 'components/LogFeed';
-
-import { GlobalStyles } from "config/global-styles";
-import { graphql } from "gatsby"
+import Header from 'components/Header'
 
 const IndexPage = ({data}) => {
   const { edges } = data.allMarkdownRemark
@@ -16,10 +17,11 @@ const IndexPage = ({data}) => {
         <SEO
           title="Roger Ramos"
           keywords={[`design`, `front-end`, `react`, `gatsby`, `react`]}
-        />
+        />  
         <GlobalStyles />
-        <div style={{ marginBottom: `1.45rem`, display: "inline" }}>
-          <ProfileImage />
+        <Header />
+        <div style={{ marginBottom: `5rem`}}>
+          <ProfileImage style={{margin: '0 auto'}} />
         </div>
         <IntroText />
         {edges && (<LogFeed logs={edges} />)}

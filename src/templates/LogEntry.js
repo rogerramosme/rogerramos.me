@@ -1,21 +1,38 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { GlobalStyles } from "config/global-styles";
+import SEO from "components/seo";
+import Layout from "components/Layout/";
+import LogHeader from 'components/LogHeader/'
+import { Wrapper, Title, Tag, Date, LogBody, TagWrapper, GoBack } from "./LogEntry.style";
+import { format } from 'date-fns';
 
 export default function Template({ data }) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
+  const { title, date, tags } = frontmatter;
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
+    <Layout>
+      <SEO
+        title={`Roger Ramos - ${title}`}
+        keywords={[`design`, `front-end`, `react`, `gatsby`, `react`]}
+      />  
+      <GlobalStyles />
+      <Wrapper>
+        <LogHeader />
+        <Title>{title}</Title>
+        <Date>{format(date, 'MMMM DD, YYYY')}</Date>
+        <LogBody
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-      <a href="/">go back</a>
-    </div>
+        {tags && (
+          <TagWrapper>
+            {tags.map(tag => <Tag>{tag}</Tag>)}
+          </TagWrapper>
+        )}
+        <GoBack href="/">Go back</GoBack>
+      </Wrapper>
+    </Layout>
   )
 }
 
@@ -26,6 +43,7 @@ export const pageQuery = graphql`
       frontmatter {
         date
         title
+        tags
       }
     }
   }
