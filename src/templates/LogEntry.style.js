@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Wrapper = styled.article`
     max-width: 70rem;
     margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
 `
 
 export const TagWrapper = styled.div`
