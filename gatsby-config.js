@@ -29,7 +29,23 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-offline',
+      runtimeCaching: [
+        {
+          // Use cacheFirst since these don't need to be revalidated (same RegExp
+          // and same reason as above)
+          urlPattern: /(\.js$|\.css$|static\/)/,
+          handler: `cacheFirst`,
+        },
+        {
+          // Google Fonts CSS (doesn't end in .css so we need to specify it)
+          urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+          handler: `staleWhileRevalidate`,
+        },
+      ]
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
