@@ -2,7 +2,7 @@
   "name": "rogerramos.me",
   "private": true,
   "description": "Front-end of My Website",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "author": "Roger Ramos <@rodgerpaulo>",
   "dependencies": {
     "date-fns": "^1.30.1",
