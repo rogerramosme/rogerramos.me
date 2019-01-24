@@ -1,18 +1,18 @@
 import { string } from "prop-types";
 import React from "react";
-import { HeaderWraper, HeaderContent, HeaderTitle, HeaderSubtitle } from "./Header.style";
+import { Wraper, Content, Title, Subtitle } from "./Header.style";
 
 const Header = ({ siteTitle, siteSubTitle }) => (
-  <HeaderWraper>
-    <HeaderContent>
-      <HeaderTitle>
+  <Wraper>
+    <Content>
+      <Title>
         {siteTitle}
-      </HeaderTitle>
-      <HeaderSubtitle>
+      </Title>
+      <Subtitle>
         {siteSubTitle}
-      </HeaderSubtitle>
-    </HeaderContent>
-  </HeaderWraper>
+      </Subtitle>
+    </Content>
+  </Wraper>
 );
 
 Header.propTypes = {

@@ -25,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        color: #ff0047;
+        color: #868686;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
@@ -34,7 +34,12 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     a {
+        color: #ff0047;
         text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     img {

@@ -3,9 +3,10 @@ import { FooterWrapper } from "./Footer.style"
 
 const Footer = () => (
     <FooterWrapper>
+        <p>That's all =)</p>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a href="https://www.gatsbyjs.org">Gatsby</a>, hosted by <a href="https://www.netlify.com/">Netlify</a>
     </FooterWrapper>
 );
 

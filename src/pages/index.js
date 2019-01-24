@@ -1,8 +1,11 @@
 import React, { Fragment } from "react";
-import Layout from "../components/Layout/";
-import ProfileImage from "../components/ProfileImage/";
-import SEO from "../components/seo";
-import { GlobalStyles } from "../config/global-styles";
+import Layout from "components/Layout/";
+import ProfileImage from "components/ProfileImage/";
+import SEO from "components/seo";
+import IntroText from 'components/IntroText';
+import LogFeed from 'components/LogFeed';
+
+import { GlobalStyles } from "config/global-styles";
 import { graphql } from "gatsby"
 
 const IndexPage = ({data}) => {
@@ -18,21 +21,9 @@ const IndexPage = ({data}) => {
         <div style={{ marginBottom: `1.45rem`, display: "inline" }}>
           <ProfileImage />
         </div>
+        <IntroText />
+        {edges && (<LogFeed logs={edges} />)}
       </Layout>
-      <ul>
-        {edges && (edges.map(({node}, index) => {
-          const customUrl = node.frontmatter.custom_url
-          const path = customUrl ? customUrl : node.fields.slug
-          return (
-            <Fragment key={`log-${index}`}>
-              <li>id: {node.id}</li>
-              <li>url: <a href={path}>{path}</a></li>
-              <li>title: {node.frontmatter.title}</li>
-              <li>date: {node.frontmatter.date}</li>
-            </Fragment>
-          )
-        }))}
-      </ul>
     </Fragment>
   )
 }
@@ -51,8 +42,9 @@ export const query = graphql`
           excerpt(pruneLength: 75)
           frontmatter {
             title
-            date(formatString: "MM.DD.YYYY")
+            date
             custom_url
+            tags
           }
           fields {
             slug
