@@ -38,6 +38,7 @@
     "build": "gatsby build",
     "build:docker": "docker build -t $npm_package_name:$npm_package_version .",
     "build:local": "npm run build && npm run serve",
+    "serve:docker": "docker run -p 8080:80 $npm_package_name:$npm_package_version",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
