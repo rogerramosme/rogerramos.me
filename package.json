@@ -25,16 +25,15 @@
     "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.js\"",
     "lint-staged": "lint-staged",
-    "lintcss": "stylelint --config .stylelintrc src/styles/**/*.scss",
-    "lintjs": "eslint -c .eslintrc src/javascripts/**/*"
+    "lintjs": "eslint -c .eslintrc src/**/*"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
-    "src/javascripts/**/*.js": [
+    "src/**/*.js": [
       "eslint",
       "git add"
     ],
-    "src/javascripts/**/*.jsx": [
+    "src/**/*.jsx": [
       "eslint",
       "git add"
     ]
