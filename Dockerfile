@@ -14,10 +14,11 @@ RUN npm install
 
 FROM dependencies as source
 COPY . .
-# FROM dependencies AS test
-# RUN npm run test:ci
 
-FROM source AS release
+FROM dependencies AS test
+RUN npm run lintjs
+
+FROM test AS release
 RUN npm run build
 
 FROM m4rcu5/lighttpd AS final

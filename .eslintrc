@@ -2,7 +2,10 @@
   "extends": ["google", "plugin:react/recommended", "prettier"],
   "plugins": ["react", "prettier", "jsx-a11y", "compat"],
   "settings": {
-    "polyfills": ["fetch"]
+    "polyfills": ["fetch"],
+    "react": {
+      "version": "detect"
+    }
   },
   "parser": "babel-eslint",
   "parserOptions": {

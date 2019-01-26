@@ -18,11 +18,11 @@
   "scripts": {
     "build": "gatsby build",
     "build:docker": "docker build -t $npm_package_name:$npm_package_version .",
-    "build:local": "npm run build && npm run serve",
-    "serve:docker": "docker run -p 8080:80 $npm_package_name:$npm_package_version",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "serve:prod": "npm run build && npm run serve",
+    "serve:docker": "docker run -p 8000:80 $npm_package_name:$npm_package_version",
     "format": "prettier --write \"src/**/*.js\"",
     "lint-staged": "lint-staged",
     "lintjs": "eslint -c .eslintrc src/**/*.js"
