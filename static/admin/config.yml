@@ -1,5 +1,5 @@
 backend:
-  name: github 
+  name: github
   repo: rodgerpaulo/rogerramos.me
 
 media_folder: static/assets
@@ -13,9 +13,14 @@ collections:
     folder: entries
     create: true
     fields:
-      - { name: custom_url, label: Custom url, required: false }
+      - { name: customUrl, label: Custom url, required: false }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: hero, label: Hero, widget: image, required: false }
-      - { label: "Tags", name: "tags", widget: "list", default: ["javascript"] }
+      - {
+          label: Tags (comma separated),
+          name: tags,
+          widget: list,
+          default: ['javascript'],
+        }
       - { name: body, label: Body, widget: markdown }

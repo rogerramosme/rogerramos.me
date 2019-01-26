@@ -2,22 +2,22 @@ module.exports = {
   siteMetadata: {
     title: `Designer, Front-End Developer & UX Addicted`,
     description: `Here you can find my thoughts, ideas and Web Development Journal.`,
-    author: `@rodgerpaulo`,
+    author: `@rodgerpaulo`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-          id: "GTM-5DS763X"
-      },
+        id: 'GTM-5DS763X'
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,33 +37,31 @@ module.exports = {
           // Use cacheFirst since these don't need to be revalidated (same RegExp
           // and same reason as above)
           urlPattern: /(\.js$|\.css$|static\/)/,
-          handler: `cacheFirst`,
+          handler: `cacheFirst`
         },
         {
           // Google Fonts CSS (doesn't end in .css so we need to specify it)
           urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
-          handler: `staleWhileRevalidate`,
-        },
+          handler: `staleWhileRevalidate`
+        }
       ]
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `rogerramos.me`,
+        short_name: `rogerramos.me`,
         start_url: `/`,
         background_color: `#ff0047`,
-        theme_color: `#663399`,
+        theme_color: `#ff0047`,
         display: `minimal-ui`,
-        icon: `src/images/profile-image.jpg`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/profile-image.jpg` // This path is relative to the root of the site.
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Roboto\:400,700`,
-        ]
+        fonts: [ `Roboto\:400,700` ]
       }
     },
     {
@@ -73,15 +71,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
-              aliases: { sh: "bash" },
+              aliases: { sh: 'bash' },
               showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          },
-        ],
-      },
+              noInlineHighlight: false
+            }
+          }
+        ]
+      }
     }
-  ],
-}
+  ]
+};

@@ -1,2 +1,2 @@
-import IntroText from './IntroText'
+import IntroText from './IntroText';
 export default IntroText;
