@@ -1,2 +1,2 @@
-import LogHeader from './LogHeader'
+import LogHeader from './LogHeader';
 export default LogHeader;

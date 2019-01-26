@@ -1,10 +1,19 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { GlobalStyles } from "config/global-styles";
-import SEO from "components/seo";
-import Layout from "components/Layout/";
-import LogHeader from 'components/LogHeader/'
-import { Wrapper, Title, Tag, Date, LogBody, TagWrapper, GoBack } from "./LogEntry.style";
+import React from 'react';
+import { any } from 'prop-types';
+import { graphql } from 'gatsby';
+import { GlobalStyles } from 'config/global-styles';
+import SEO from 'components/seo';
+import Layout from 'components/Layout/';
+import LogHeader from 'components/LogHeader/';
+import {
+  Wrapper,
+  Title,
+  Tag,
+  Date,
+  LogBody,
+  TagWrapper,
+  GoBack
+} from './LogEntry.style';
 import { format } from 'date-fns';
 
 export default function Template({ data }) {
@@ -15,30 +24,34 @@ export default function Template({ data }) {
     <Layout>
       <SEO
         title={`Roger Ramos - ${title}`}
-        keywords={[`design`, `front-end`, `react`, `gatsby`, `react`]}
-      />  
+        keywords={[ `design`, `front-end`, `react`, `gatsby`, `react` ]}
+      />
       <GlobalStyles />
       <Wrapper>
         <LogHeader />
         <Title>{title}</Title>
         <Date>{format(date, 'MMMM DD, YYYY')}</Date>
-        <LogBody
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <LogBody dangerouslySetInnerHTML={{ __html: html }} />
         {tags && (
           <TagWrapper>
-            {tags.map(tag => <Tag>{tag}</Tag>)}
+            {tags.map((tag, index) => (
+              <Tag key={`tag-${index}`}>{tag}</Tag>
+            ))}
           </TagWrapper>
         )}
         <GoBack href="/">Go back</GoBack>
       </Wrapper>
     </Layout>
-  )
+  );
 }
+
+Template.propTypes = {
+  data: any
+};
 
 export const pageQuery = graphql`
   query($id: String!) {
-    markdownRemark(id: { eq: $id } ) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         date
@@ -47,4 +60,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

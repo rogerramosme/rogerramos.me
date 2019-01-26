@@ -1,2 +1,2 @@
-import LogFeed from './LogFeed'
+import LogFeed from './LogFeed';
 export default LogFeed;
