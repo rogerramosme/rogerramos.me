@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "config/*": ["src/config/*"],
+      "images/*": ["src/images/*"],
+      "pages/*": ["src/pages/*"],
+      "templates/*": ["src/templates/*"]
+    }
+  },
+  "exclude": ["node_modules", "public"]
+}

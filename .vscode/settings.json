@@ -1,0 +1,19 @@
+{
+    "stylelint.enable": true,
+    "prettier.stylelintIntegration": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "node_modules": true
+    },
+    "scss.validate": false,
+    "css.validate": false,
+    "eslint.autoFixOnSave": true,
+    "eslint.run": "onSave",
+    "prettier.singleQuote": true
+  }
