@@ -1,7 +1,7 @@
 ---
-date: 2019-01-26T15:18:18.369Z
-title: Styled Components and Gatsby
 customUrl: ''
+date: 2019-01-26T15:18:18.369Z
+title: Styled Components broke css with Gatsby
 tags:
   - javascript
   - styled-components
