@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { Colours } from 'config/theme';
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -25,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        color: #868686;
+        color: ${Colours.Gray};
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
@@ -34,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     a {
-        color: #ff0047;
+        color: ${Colours.TorchRed};
         text-decoration: none;
 
         &:hover {

@@ -16,12 +16,12 @@ export const Title = styled.h1`
   line-height: 1.2;
   font-size: 4rem;
   font-weight: 700;
-  color: #ff0047;
+  color: ${({ theme }) => theme.general.active};
 `;
 
 export const Subtitle = styled.h2`
   font-weight: 400;
   line-height: 1.5;
   font-size: 2rem;
-  color: #303030;
+  color: ${({ theme }) => theme.general.text};
 `;

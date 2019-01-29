@@ -1,6 +1,7 @@
 import React from 'react';
 import { array } from 'prop-types';
-import { Wrapper, Log, Date, Title, Link, Tag } from './LogFeed.style';
+import { Wrapper, Log, Title, Link } from './LogFeed.style';
+import { Date, Tag } from 'components/Text';
 import { format } from 'date-fns';
 
 const LogFeed = ({ logs }) => (

@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { any } from 'prop-types';
 import { graphql } from 'gatsby';
-import { GlobalStyles } from 'config/global-styles';
 
 import Layout from 'components/Layout/';
 import ProfileImage from 'components/ProfileImage/';
@@ -19,7 +18,6 @@ const IndexPage = ({ data }) => {
           title="Roger Ramos"
           keywords={[ `design`, `front-end`, `react`, `gatsby`, `react` ]}
         />
-        <GlobalStyles />
         <Header />
         <div style={{ marginBottom: `5rem` }}>
           <ProfileImage style={{ margin: '0 auto' }} />
