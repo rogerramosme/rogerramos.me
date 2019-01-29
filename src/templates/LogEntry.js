@@ -1,14 +1,13 @@
 import React from 'react';
 import { any } from 'prop-types';
 import { graphql } from 'gatsby';
-import { GlobalStyles } from 'config/global-styles';
 import SEO from 'components/seo';
 import Layout from 'components/Layout/';
 import LogHeader from 'components/LogHeader/';
+import { Tag } from 'components/Text';
 import {
   Wrapper,
   Title,
-  Tag,
   Date,
   LogBody,
   TagWrapper,
@@ -26,7 +25,6 @@ export default function Template({ data }) {
         title={`Roger Ramos - ${title}`}
         keywords={[ `design`, `front-end`, `react`, `gatsby`, `react` ]}
       />
-      <GlobalStyles />
       <Wrapper>
         <LogHeader />
         <Title>{title}</Title>

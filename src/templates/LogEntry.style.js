@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Date as DateTag } from 'components/Text';
 
 export const Wrapper = styled.article`
   max-width: 70rem;
@@ -12,27 +13,15 @@ export const TagWrapper = styled.div`
   margin-bottom: 2rem;
 `;
 
-export const Tag = styled.small`
-  color: #ff0047;
-  font-size: 1.2rem;
-  line-height: 1.5;
-
-  & + &:before {
-    content: ', ';
-  }
-`;
-
 export const Title = styled.h1`
   margin: 0 auto 0.5rem auto;
   line-height: 1.2;
   font-size: 4rem;
   font-weight: 700;
-  color: #303030;
+  color: ${({ theme }) => theme.general.text};
 `;
 
-export const Date = styled.time`
-  font-size: 1.5rem;
-  line-height: 1.5;
+export const Date = styled(DateTag)`
   margin-bottom: 4rem;
   display: block;
 `;
@@ -40,7 +29,7 @@ export const Date = styled.time`
 export const LogBody = styled.div`
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #303030;
+  color: ${({ theme }) => theme.general.text};
 `;
 
 export const GoBack = styled.a`

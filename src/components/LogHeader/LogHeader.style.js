@@ -9,7 +9,7 @@ export const Wrapper = styled.header`
 
 export const Title = styled.a`
   font-size: 2rem;
-  color: #ff0047;
+  color: ${({ theme }) => theme.general.active};
   display: inline-block;
   margin-left: 1.5rem;
 `;

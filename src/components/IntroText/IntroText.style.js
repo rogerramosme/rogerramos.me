@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   padding: 4rem;
-  background-color: #ff0047;
+  background-color: ${({ theme }) => theme.general.active};
 
   @media (min-width: 700px) {
     padding: 5rem 0;
@@ -26,7 +26,7 @@ export const Title = styled.h3`
 `;
 
 export const Paragraph = styled.p`
-  color: #fff;
+  color: white;
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 400;
