@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Designer, Front-End Developer & UX Addicted`,
     description: `Here you can find my thoughts, ideas and Web Development Journal.`,
-    author: `@rodgerpaulo`
+    author: `@rodgerpaulo`,
+    siteUrl: `https://rogerramos.me`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
