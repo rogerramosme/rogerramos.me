@@ -14,7 +14,8 @@ So I did some research and found [this gist](https://gist.github.com/mobilemind/
 # to delete a local tag just run e.g.: v1.9.1
 git tag -d v1.9.1
 
-# if you already published (like me)git tag -d v1.9.1
+# if you already published (like me)
+git tag -d v1.9.1
 git push origin :refs/tags/v1.9.1
 
 # another approach
