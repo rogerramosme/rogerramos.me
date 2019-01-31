@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import profileImage from 'images/profile-image.jpg';
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -35,6 +36,22 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: `website`
               },
               {
+                property: `og:image`,
+                content: profileImage
+              },
+              {
+                property: `og:image:type`,
+                content: `image/jpeg`
+              },
+              {
+                property: `og:image:width`,
+                content: `1080`
+              },
+              {
+                property: `og:image:height`,
+                content: `1080`
+              },
+              {
                 name: `twitter:card`,
                 content: `summary`
               },
@@ -49,6 +66,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 name: `twitter:description`,
                 content: metaDescription
+              },
+              {
+                name: `google-site-verification`,
+                content: `Ncj_RILPB-sl8QcoYgQfKlpIN9XKcDS808LCYAEBAXY`
               }
             ]
               .concat(
