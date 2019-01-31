@@ -22,8 +22,8 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO
-        title={`Roger Ramos - ${title}`}
-        keywords={[ `design`, `front-end`, `react`, `gatsby`, `react` ]}
+        title={`${title} - Roger Ramos`}
+        keywords={[`design`, `front-end`, `react`, `gatsby`, `react`]}
       />
       <Wrapper>
         <LogHeader />
