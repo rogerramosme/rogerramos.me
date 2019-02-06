@@ -1,6 +1,6 @@
-📝 My personal Log!
+## 📝 My personal Log!
 
-Inspired by this repo I've created this website to document every thing I'm learn daily.
+Inspired by [this repo](https://github.com/raphaelfabeni/log) from Rafael Fabeni, I've created this website to document every thing I'm learn daily.
 Feel free to clone and use as your Log too 🥰
 
 _Had a cool idea? Please open an [Issue](https://github.com/rodgerpaulo/rogerramos.me/issues) and let's talk!_
