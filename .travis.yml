@@ -1,6 +1,6 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=785629e69f6a264ec59afbcbae86450fa7621dfe1e12a23051888a84a09b6e63
+    - CC_TEST_REPORTER_ID=$CC_REPORTER_ID
 language: ruby
 rvm:
   - 2.2.0
@@ -18,8 +18,14 @@ node_js:
 script:
   - npm run lintjs
   - npm run build 
-after_success:
-  - npm run coverage
+notifications:
+  webhooks:
+    urls: https://api.netlify.com/build_hooks/$NETLIFY_HOOK_ID
+    on_success: always
+    on_failure: never
+    on_start: never
+    on_cancel: never
+    on_error: never
 # safelist
 branches:
   only:
