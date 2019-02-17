@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { Wraper, Content, Title, Subtitle } from './Header.style';
+import { Wraper, Content, Subtitle } from './Header.style';
+import { Title } from 'components/Text';
 
 const Header = () => {
   return (

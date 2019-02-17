@@ -11,14 +11,6 @@ export const Content = styled.header`
   text-align: center;
 `;
 
-export const Title = styled.h1`
-  margin: 0 auto 1.5rem auto;
-  line-height: 1.2;
-  font-size: 4rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.general.active};
-`;
-
 export const Subtitle = styled.h2`
   font-weight: 400;
   line-height: 1.5;

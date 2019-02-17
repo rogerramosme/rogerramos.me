@@ -5,14 +5,8 @@ import SEO from 'components/seo';
 import Layout from 'components/Layout/';
 import LogHeader from 'components/LogHeader/';
 import { Tag } from 'components/Text';
-import {
-  Wrapper,
-  Title,
-  Date,
-  LogBody,
-  TagWrapper,
-  GoBack
-} from './LogEntry.style';
+import { Wrapper, Date, LogBody, TagWrapper, GoBack } from './LogEntry.style';
+import { Title } from 'components/Text';
 import { format } from 'date-fns';
 
 export default function Template({ data }) {
@@ -27,7 +21,7 @@ export default function Template({ data }) {
       />
       <Wrapper>
         <LogHeader />
-        <Title>{title}</Title>
+        <Title margin="0 auto 0.5rem auto">{title}</Title>
         <Date>{format(date, 'MMMM DD, YYYY')}</Date>
         <LogBody dangerouslySetInnerHTML={{ __html: html }} />
         {tags && (

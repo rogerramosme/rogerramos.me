@@ -13,14 +13,6 @@ export const TagWrapper = styled.div`
   margin-bottom: 2rem;
 `;
 
-export const Title = styled.h1`
-  margin: 0 auto 0.5rem auto;
-  line-height: 1.2;
-  font-size: 4rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.general.text};
-`;
-
 export const Date = styled(DateTag)`
   margin-bottom: 4rem;
   display: block;
