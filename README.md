@@ -1,4 +1,5 @@
 ## 📝 My personal Log!
+[![Maintainability](https://api.codeclimate.com/v1/badges/6cff10c95f1d1a5e503b/maintainability)](https://codeclimate.com/github/rodgerpaulo/rogerramos.me/maintainability)
 
 Inspired by [this repo](https://github.com/raphaelfabeni/log) from Rafael Fabeni, I've created this website to document every thing I'm learn daily.
 Feel free to clone and use as your Log too 🥰
