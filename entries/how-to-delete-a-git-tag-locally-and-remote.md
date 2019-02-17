@@ -4,7 +4,7 @@ title: How to delete a git tag locally and remote
 tags:
   - git
 ---
-Today I made a mistake of publishing a wrong `git` tag and I asked to myself: What the fuck do I do now?
+Today I made a mistake of publishing a wrong `git` tag and I asked myself: What the fuck do I do now?
 
 So I did some research and found [this gist](https://gist.github.com/mobilemind/7883996) from [mobilemind](https://gist.github.com/mobilemind).
 
@@ -25,6 +25,6 @@ git tag -d v1.9.1
 
 # Conclusion
 
-Always double-check before push something to remote 😂
+Always double-check before pushing something to remote 😂
 
 Happy codding
