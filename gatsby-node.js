@@ -67,7 +67,8 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
         config: path.resolve(__dirname, 'src/config/'),
         images: path.resolve(__dirname, 'src/images/'),
         pages: path.resolve(__dirname, 'src/pages/'),
-        templates: path.resolve(__dirname, 'src/templates/')
+        templates: path.resolve(__dirname, 'src/templates/'),
+        services: path.resolve(__dirname, 'src/services/')
       }
     }
   });
