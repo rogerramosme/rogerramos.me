@@ -4,13 +4,14 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import profileImage from 'images/profile-image.jpg';
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, slug }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description;
+        const { siteUrl } = data.site.siteMetadata
         return (
           <Helmet
             htmlAttributes={{
@@ -18,6 +19,16 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            link={[
+              {
+                rel: 'canonical',
+                href: `${siteUrl}${slug}`
+              },
+              {
+                rel: 'amphtml',
+                href: `${siteUrl}/amp${slug}`
+              }
+            ]}
             meta={[
               {
                 name: `description`,
@@ -37,7 +48,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: profileImage
+                content: `${siteUrl}${profileImage}`
               },
               {
                 property: `og:image:type`,
@@ -91,7 +102,8 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: []
+  keywords: [],
+  slug: ``
 };
 
 SEO.propTypes = {
@@ -99,7 +111,8 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string
 };
 
 export default SEO;
@@ -111,6 +124,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        siteUrl
       }
     }
   }

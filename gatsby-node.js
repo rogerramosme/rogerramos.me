@@ -38,6 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
         path,
         component: LogEntryTemplate,
         context: {
+          slug: path,
           id: node.id
         } // additional data can be passed via context
       });

@@ -9,7 +9,7 @@ import { Wrapper, Date, LogBody, TagWrapper, GoBack } from './LogEntry.style';
 import { Title } from 'components/Text';
 import { format } from 'date-fns';
 
-export default function Template({ data }) {
+export default function Template({ data, pageContext }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const { title, date, tags } = frontmatter;
@@ -18,6 +18,7 @@ export default function Template({ data }) {
       <SEO
         title={`${title} - Roger Ramos`}
         keywords={[ `design`, `front-end`, `react`, `gatsby`, `react` ]}
+        slug={pageContext.slug}
       />
       <Wrapper>
         <LogHeader />
@@ -38,13 +39,17 @@ export default function Template({ data }) {
 }
 
 Template.propTypes = {
-  data: any
+  data: any,
+  pageContext: any
 };
 
 export const pageQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         date
         title

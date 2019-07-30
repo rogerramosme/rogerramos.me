@@ -29,6 +29,19 @@ module.exports = {
         name: 'markdown-pages'
       }
     },
+    {
+      resolve: 'gatsby-plugin-html2amp',
+      options: {
+        files: [ '/**/index.html', 'index.html' ],
+        gaConfigPath: 'gaConfig.json',
+        dist: 'public/amp',
+        serviceWorker: {
+          src: 'https://rogerramos.me/sw.js',
+          'data-iframe-src': 'https://rogerramos.me/amp-install-serviceworker.html',
+          layout: 'nodisplay'
+        }
+      }
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
