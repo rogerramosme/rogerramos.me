@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
 
     html {
         font-size: 62.5%;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         line-height: 1;
         -webkit-text-size-adjust: none;
     }
@@ -76,5 +76,5 @@ export const GlobalStyles = createGlobalStyle`
     fieldset {
         margin: 0;
         padding: 0;
-    }  
+    }
 `;
