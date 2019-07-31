@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
         height: 100%;
         margin: 0;
         padding: 0;
+        scroll-behavior: smooth;
     }
 
     html {

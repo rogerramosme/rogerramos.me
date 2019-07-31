@@ -15,7 +15,7 @@ const IntroText = () => (
       my development day‘s.
     </Paragraph>
     <Paragraph>Feel free to see what I‘m doing below =)</Paragraph>
-    <ScrollDownButton href="#">
+    <ScrollDownButton href="#main-quote">
       Scroll down
     </ScrollDownButton>
   </Wrapper>

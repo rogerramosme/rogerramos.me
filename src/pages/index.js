@@ -7,6 +7,7 @@ import SEO from 'components/seo';
 import IntroText from 'components/IntroText';
 import LogFeed from 'components/LogFeed';
 import Header from 'components/Header';
+import Quote from 'components/Quote';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -19,6 +20,11 @@ const IndexPage = ({ data }) => {
         />
         <Header />
         <IntroText />
+        <Quote id="main-quote">
+          The past beats inside me like a second heart.
+          <br />
+          ― John Benville, The Sea
+        </Quote>
         {edges && <LogFeed logs={edges} />}
       </Layout>
     </Fragment>
