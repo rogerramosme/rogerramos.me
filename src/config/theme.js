@@ -1,6 +1,6 @@
 export const Colours = {
-  TorchRed: '#FF0047',
-  Gray: '#868686',
+  TorchRed: '#C62828',
+  Gray: '#757575',
   MineShaft: '#303030'
 };
 

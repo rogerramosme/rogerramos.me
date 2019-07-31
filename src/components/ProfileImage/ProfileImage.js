@@ -29,6 +29,7 @@ const ProfileImage = props => {
               width: size,
               height: size
             }}
+            alt="Roger Ramos grayscale profile photo with a nice smile and hat"
           />
         </ImageContainer>
       )}

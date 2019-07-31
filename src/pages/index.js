@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
         />
         <Header />
         <div style={{ marginBottom: `5rem` }}>
-          <ProfileImage style={{ margin: '0 auto' }} />
+          <ProfileImage alt="Roger Ramos profile grayscale photo" style={{ margin: '0 auto' }} />
         </div>
         <IntroText />
         {edges && <LogFeed logs={edges} />}

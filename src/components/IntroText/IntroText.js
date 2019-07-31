@@ -15,8 +15,8 @@ const IntroText = () => (
       my development day‘s.
     </Paragraph>
         <Paragraph>
-          <SocialIcon onClick={() => pushDataLayer('Social Network', 'Github')} url="https://github.com/rodgerpaulo" socialName="github"/>
-          <SocialIcon onClick={() => pushDataLayer('Social Network', 'Linkedin')} url="https://linkedin.com/in/rogerramos/" />
+          <SocialIcon aria-label="Find out more about my works and experiments at Github" onClick={() => pushDataLayer('Social Network', 'Github')} url="https://github.com/rodgerpaulo" socialName="github"/>
+          <SocialIcon aria-label="Discover my professional journal at my Linkedin profile" onClick={() => pushDataLayer('Social Network', 'Linkedin')} url="https://linkedin.com/in/rogerramos/" />
       </Paragraph>
     <Paragraph>Feel free to see what I‘m doing below =)</Paragraph>
   </Wrapper>
