@@ -11,12 +11,12 @@ const LogFeed = ({ logs }) => (
         const { customUrl, title, date, tags } = node.frontmatter;
         const path = customUrl ? customUrl : node.fields.slug;
         return (
-          <Log key={`log-${index}`}>
+          <Log key={`log-${date}`}>
             <Date dateTime={date}>{format(date, 'MMMM DD, YYYY')}</Date>
             <Title>
               <Link href={path}>{title}</Link>
             </Title>
-            {tags && tags.map(tag => <Tag key={`tag-${index}`}>{tag}</Tag>)}
+            {tags && tags.map(tag => <Tag key={`tag-${date}-${tag}`}>{tag}</Tag>)}
           </Log>
         );
       })}

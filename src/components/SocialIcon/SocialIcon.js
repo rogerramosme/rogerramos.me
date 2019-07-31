@@ -29,9 +29,9 @@ export default SocialIcon
 
 SocialIcon.propTypes = {
   url: string.isRequired,
-  socialName: string
+  socialName: oneOf([ 'github', 'linkedin' ])
 }
 
 SocialIcon.defaultProps = {
-  socialName: oneOf([ 'github', 'linkedin' ])
+  socialName: 'github'
 }

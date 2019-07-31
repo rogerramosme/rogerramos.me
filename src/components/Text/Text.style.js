@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Tag = styled.small`
   color: ${({ theme }) => theme.general.active};
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  line-height: 1;
 
   & + &:before {
-    content: ', ';
+    content: '  •  '
   }
 `;
 

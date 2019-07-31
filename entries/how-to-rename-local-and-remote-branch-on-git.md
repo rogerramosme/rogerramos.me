@@ -4,7 +4,6 @@ title: How to rename local and remote branch on Git
 tags:
   - javascript
   - git
-  - ''
 ---
 Have you been on a rush and created a branch with orthographic errors?
 

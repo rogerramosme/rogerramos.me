@@ -1,2 +1,1 @@
-import IntroText from './IntroText';
-export default IntroText;
+export { default } from './IntroText';
