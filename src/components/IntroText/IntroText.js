@@ -1,11 +1,11 @@
 import React from 'react';
-import { Wrapper, Paragraph, Title, Link } from './IntroText.style';
-import SocialIcon from 'components/SocialIcon'
-import pushDataLayer from 'services/pushDataLayer'
+import { Wrapper, Paragraph, Link, ScrollDownButton } from './IntroText.style';
 
 const IntroText = () => (
   <Wrapper>
-    <Title>Hi, I‘m Roger. Wellcome to my Journal</Title>
+    <Paragraph>
+      Here you can find my thoughts, ideas and Development Journal.
+    </Paragraph>
     <Paragraph>
       Inspired by{' '}
       <Link href="https://github.com/raphaelfabeni/log">
@@ -14,11 +14,10 @@ const IntroText = () => (
       , I‘ve created this Website to document every cool stuff I‘m learning on
       my development day‘s.
     </Paragraph>
-        <Paragraph>
-          <SocialIcon aria-label="Find out more about my works and experiments at Github" onClick={() => pushDataLayer('Social Network', 'Github')} url="https://github.com/rodgerpaulo" socialName="github"/>
-          <SocialIcon aria-label="Discover my professional journal at my Linkedin profile" onClick={() => pushDataLayer('Social Network', 'Linkedin')} url="https://linkedin.com/in/rogerramos/" />
-      </Paragraph>
     <Paragraph>Feel free to see what I‘m doing below =)</Paragraph>
+    <ScrollDownButton href="#">
+      Scroll down
+    </ScrollDownButton>
   </Wrapper>
 );
 

@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import DefaultScrollDownButton from 'components/ScrollDownButton'
 
 export const Wrapper = styled.section`
   padding: 4rem;
   background-color: ${({ theme }) => theme.general.active};
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
   @media (min-width: 700px) {
     padding: 5rem 0;
@@ -18,13 +22,6 @@ export const Link = styled.a`
   }
 `;
 
-export const Title = styled.h3`
-  font-size: 3.2rem;
-  text-align: center;
-  color: white;
-  font-weight: 700;
-`;
-
 export const Paragraph = styled.p`
   color: white;
   font-size: 2rem;
@@ -32,5 +29,9 @@ export const Paragraph = styled.p`
   font-weight: 400;
   text-align: center;
   max-width: 70rem;
-  margin: 2rem auto;
+  margin: 2rem 0;
 `;
+
+export const ScrollDownButton = styled(DefaultScrollDownButton)`
+  margin-top: 3.4rem;
+`
