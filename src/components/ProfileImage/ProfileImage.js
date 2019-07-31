@@ -1,7 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { ImageContainer } from './ProfileImage.style';
 
 const ProfileImage = props => {
@@ -10,10 +9,10 @@ const ProfileImage = props => {
     <StaticQuery
       query={graphql`
         query {
-          placeholderImage: file(relativePath: { eq: "profile-image.jpg" }) {
+          avatar: file(relativePath: { eq: "profile-image.jpg" }) {
             childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
+              fixed(width: 300, height: 300) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -21,14 +20,15 @@ const ProfileImage = props => {
       `}
       render={data => (
         <ImageContainer {...rest}>
-          <Img
+          <img
+            src={data.avatar.childImageSharp.fixed.src}
+            srcSet={data.avatar.childImageSharp.fixed.srcSet}
             style={{
-              borderRadius: '50%',
+              borderRadius: '100%',
               maxWidth: '30rem',
               width: size,
               height: size
             }}
-            fluid={data.placeholderImage.childImageSharp.fluid}
           />
         </ImageContainer>
       )}
