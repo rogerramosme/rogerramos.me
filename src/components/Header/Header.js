@@ -27,7 +27,7 @@ const Header = () => {
               <br />
               Welcome to my Journal
             </Subtitle>
-            <ProfileImage alt="Roger Ramos profile grayscale photo" />
+            <ProfileImage />
             <div>
               <SocialIcon aria-label="Find out more about my works and experiments at Github" onClick={() => pushDataLayer('Social Network', 'Github')} url="https://github.com/rodgerpaulo" />
               <SocialIcon aria-label="Discover my professional journal at my Linkedin profile" onClick={() => pushDataLayer('Social Network', 'Linkedin')} url="https://linkedin.com/in/rogerramos/" socialName="linkedin"/>
