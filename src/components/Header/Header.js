@@ -1,9 +1,8 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import pushDataLayer from 'services/pushDataLayer'
-import { Title } from 'components/Text';
 import SocialIcon from 'components/SocialIcon'
-import { Wraper, Subtitle, ProfileImage } from './Header.style';
+import { Wraper, Title, Subtitle, ProfileImage } from './Header.style'
 
 const Header = () => {
   return (
@@ -19,11 +18,15 @@ const Header = () => {
         }
       `}
       render={data => {
-        const { title, description } = data.site.siteMetadata;
+        const { title } = data.site.siteMetadata;
         return (
           <Wraper>
             <Title>{title}</Title>
-            <Subtitle>{description}</Subtitle>
+            <Subtitle>
+              Hi, I’m Roger.
+              <br />
+              Welcome to my Journal
+            </Subtitle>
             <ProfileImage alt="Roger Ramos profile grayscale photo" />
             <div>
               <SocialIcon aria-label="Find out more about my works and experiments at Github" onClick={() => pushDataLayer('Social Network', 'Github')} url="https://github.com/rodgerpaulo" />

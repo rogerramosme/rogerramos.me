@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Designer, Front-End Developer & UX Addicted`,
+    title: `Designer, Web Developer and UX Addicted`,
     description: `Here you can find my thoughts, ideas and Web Development Journal.`,
     author: `@rodgerpaulo`,
     siteUrl: `https://rogerramos.me`
