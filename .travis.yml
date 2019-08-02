@@ -17,8 +17,8 @@ node_js:
   - "8"
 script:
   - npm run lintjs
-  - npm run test
   - npm run build 
+  - npm run test
 notifications:
   webhooks:
     urls: https://api.netlify.com/build_hooks/$NETLIFY_HOOK_ID
