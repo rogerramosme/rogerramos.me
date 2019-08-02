@@ -25,7 +25,9 @@
     "serve:docker": "docker run -p 8000:80 $npm_package_name:$npm_package_version",
     "format": "prettier --write \"src/**/*.js\"",
     "lint-staged": "lint-staged",
-    "lintjs": "eslint -c .eslintrc src/**/*.js"
+    "lintjs": "eslint -c .eslintrc src/**/*.js",
+    "amp": "find public/amp -type f | xargs amphtml-validator",
+    "test": "npm run amp"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
