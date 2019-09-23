@@ -6,7 +6,7 @@ const Footer = () => (
     <p>You can reach me out at:</p>
     <SocialList>
       <SocialItem>
-        <a href="https://github.com/rodgerpaulo">Github</a>
+        <a href="https://github.com/rogerramosme">Github</a>
       </SocialItem>
       <SocialItem>
         <a href="https://linkedin.com/in/rogerramos/">Linkedin</a>
