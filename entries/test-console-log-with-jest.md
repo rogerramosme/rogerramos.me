@@ -19,6 +19,7 @@ I need to test with my code logged something.
 
 // create a function into global context for Jest
 global.console = {
+  ...console,
   log: jest.fn(),
   info: jest.fn(),
   error: jest.fn()
