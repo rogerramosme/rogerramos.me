@@ -24,7 +24,7 @@ git branch -m old_branch new_branch
 just run:
 
 ```ssh
-git push origin : old_branch
+git push origin : new_branch
 ```
 
 Then push your new branch to origin
